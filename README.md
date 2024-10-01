@@ -7,7 +7,7 @@ export AWS_REGION=""
 
 ## Step 2 
 RUN cd backup
-RUN cd main.go
+RUN go run main.go
 
 ## Restore
 
@@ -18,11 +18,11 @@ RUN CREATE DATABASE agentdb;
 RUN CREATE DATABASE userdb;
 
 ## Step 2
-Run the mgmt svc to migrate tables
+Run the svc to migrate tables
 
 ## Step 3
 export S3_DIR="<epoch_directory_name>"
 
 ## Step 4
 RUN cd restore
-RUN cd main.go
+RUN go run main.go
